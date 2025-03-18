@@ -1,0 +1,42 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'set_efficiency_mode'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=set_efficiency_mode",
+                    "--package=set_efficiency_mode"
+                ],
+                "filter": {
+                    "name": "set_efficiency_mode",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'set_efficiency_mode'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=set_efficiency_mode",
+                    "--package=set_efficiency_mode"
+                ],
+                "filter": {
+                    "name": "set_efficiency_mode",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
